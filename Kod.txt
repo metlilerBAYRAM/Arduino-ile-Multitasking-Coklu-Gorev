@@ -1,0 +1,58 @@
+#define K_LED 8
+#define L_LED 7
+#define M_LED 6
+#define N_LED 5
+
+bool ledDurum =  true;
+bool ledDurum1 = true;
+bool ledDurum2 = true;
+bool ledDurum3 = true;
+
+unsigned long eskiZaman = 0;
+unsigned long eskiZaman1 = 0;
+unsigned long eskiZaman2 = 0;
+unsigned long eskiZaman3 = 0;
+
+void setup() {
+   pinMode(K_LED, OUTPUT);
+   pinMode(M_LED, OUTPUT);
+   pinMode(L_LED, OUTPUT);
+   pinMode(N_LED, OUTPUT);
+   
+}
+
+void loop() {
+  
+//--------------------------------------------
+   if (millis() - eskiZaman > 1000){
+    eskiZaman = millis();
+    ledDurum = !ledDurum;
+    digitalWrite(K_LED, ledDurum);
+   }
+
+//--------------------------------------------
+   
+   if (millis() - eskiZaman1 > 500){
+    eskiZaman1 = millis();
+    ledDurum1 = !ledDurum1;
+    digitalWrite(L_LED, ledDurum1);
+   }
+//-------------------------------------------
+
+  if (millis() - eskiZaman2 > 300){
+    eskiZaman2 = millis();
+    ledDurum2 = !ledDurum2;
+    digitalWrite(M_LED, ledDurum2);
+   }
+
+
+//------------------------------------------
+
+   
+  if (millis() - eskiZaman3 > 100){
+    eskiZaman3 = millis();
+    ledDurum3 = !ledDurum3;
+    digitalWrite(N_LED, ledDurum3);
+   }
+
+}
