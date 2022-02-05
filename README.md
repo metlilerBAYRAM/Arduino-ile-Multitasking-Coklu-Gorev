@@ -1,2 +1,2 @@
-# Arduino-ile-Multitasking-oklu-G-rev
+# Arduino-ile-Multitasking-Coklu-Gorev
 Arduino ile Multitasking / Çoklu Görev
